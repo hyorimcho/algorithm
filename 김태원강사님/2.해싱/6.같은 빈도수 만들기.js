@@ -4,6 +4,7 @@ function solution(s) {
   for (let i of s) {
     map.set(i, (map.get(i) || 0) + 1);
   }
+  //value중 가장 큰 값을 반환하여 max 변수에 넣어준다.
   let max = Math.max(...map.values());
   for (let x of "abc") {
     let F = max - (map.get(x) === undefined) ? 0 : map.get(x);
