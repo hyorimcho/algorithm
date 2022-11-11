@@ -10,8 +10,22 @@ function solution(s) {
   if (stack.length > 0) return "NO";
   return answer;
 }
-console.log(solution("(())()"));
 
+function solution(s) {
+  let stack = [];
+  let answer = "YES";
+  for (x of s) {
+    if (x === "(") stack.push(x);
+    else {
+      if (stack.length === 0) return "NO";
+      stack.pop();
+    }
+  }
+  if (stack.length > 0) return "NO";
+  return answer;
+}
+
+/*
 function solution(s) {
   let answer = "YES";
   let stack = [];
@@ -24,4 +38,4 @@ function solution(s) {
   stack.length > 0 ? "NO" : "YES";
   return answer;
 }
-console.log(solution("(())()"));
+*/
