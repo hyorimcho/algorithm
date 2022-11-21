@@ -1,7 +1,4 @@
 function prime(k) {
-  if (k === 2) return true;
-  if (k % 2 === 0) return false;
-  if (k === 3) return true;
   for (let i = 2; i * i <= k; i++) {
     if (k % i === 0) return false;
   }
